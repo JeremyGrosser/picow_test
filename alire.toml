@@ -1,0 +1,22 @@
+name = "picow_test"
+description = "Shiny new project"
+version = "0.1.0-dev"
+
+authors = ["Jeremy Grosser"]
+maintainers = ["Jeremy Grosser <jeremy@synack.me>"]
+maintainers-logins = ["JeremyGrosser"]
+
+executables = ["picow_test"]
+
+[[depends-on]]
+picow_bsp = "~0.1.0-dev"
+
+[[pins]]
+picow_bsp = { url='https://github.com/JeremyGrosser/picow_bsp.git' }
+rp2040_hal = { url='https://github.com/JeremyGrosser/rp2040_hal.git' }
+
+[build-profiles]
+rp2040_hal = "development"
+picow_bsp = "development"
+cyw43 = "development"
+ipstack = "development"
